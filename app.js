@@ -3,24 +3,6 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const { Client } = require('pg');
 
-// instantiate client using your DB configurations
-const client = new Client({
-	database: 'MyDatabase',
-	user: 'postgres',
-	password: 'kimkim669977',
-	host: 'localhost',
-	port: 5432
-});
-
-client.connect()
-	.then(function(){
-		console.log('Connected  to database!')
-	})
-	.catch(function(err){
-		console.log('Cannot connect to database')
-	});
-
-
 
 const app = express();
 // tell express which folder is a static/public folder
